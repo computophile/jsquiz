@@ -1,0 +1,43 @@
+.nav{
+    &__button{
+        width: 3rem;
+        background-color: white;
+        height: .2rem;
+        align-self: center;
+        transform: translateY(-.5rem);
+
+        &::after{
+            content: '';
+            width: 3rem;
+            height: .2rem;
+            display: block;
+         background-color: white;
+
+        }
+    }
+
+}
+
+.button{
+    background-color: transparent;
+    border:none;
+    font-size: 3rem;
+
+    position: absolute;
+    top: 00%;
+    height: 100%;
+    transition: all .3s ease;
+    &__right{
+        right: 0%;
+    // padding: 25rem 0rem
+    }
+
+    &__left{
+        left: 0;
+    }
+
+    &:hover{
+    background-color: rgb(189, 189, 189);
+
+    }
+}

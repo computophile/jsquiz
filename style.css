@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'coverse';
+  src: local("COVEARG"), url("../COVEARG.ttf"); }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Lato' , sans-serif; }
+
+body, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  color: #fefefe; }
+
+.body {
+  height: 100vh;
+  width: 100%;
+  background-color: #fff6c1;
+  position: relative; }
+
+.main {
+  width: 100rem;
+  height: 55rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 5rem 10rem 0rem rgba(0, 0, 0, 0.288);
+  background-color: #d4d4d4; }
+  .main__heading {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #e69b2c;
+    animation: init 1s ease-in;
+    animation-fill-mode: backwards; }
+
+.quiz__question {
+  padding: 1rem 8rem;
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 2.8rem;
+  color: black; }
+
+.quiz__options {
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+  text-align: left;
+  list-style: none;
+  padding: 0 10rem;
+  margin: 0;
+  display: flex; }
+  .quiz__options__list {
+    transition: all .5s ease;
+    width: 35rem;
+    padding: 1rem;
+    text-align: center;
+    height: 10rem;
+    background-color: gray;
+    font-size: 1.8rem;
+    color: black;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0rem 2rem 0rem rgba(0, 0, 0, 0.288); }
+    .quiz__options__list:not(:last-child) {
+      margin-right: 3rem; }
+    .quiz__options__list:hover {
+      box-shadow: 0 1rem 2rem 0rem rgba(0, 0, 0, 0.288); }
+
+@keyframes quiz_body_animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes init {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.wrong {
+  background-color: #ff4747;
+  transition: all .3s ease; }
+
+.right {
+  background-color: #46d646;
+  transition: all .3s ease; }
+
+.nav__button {
+  width: 3rem;
+  background-color: white;
+  height: .2rem;
+  align-self: center;
+  transform: translateY(-0.5rem); }
+  .nav__button::after {
+    content: '';
+    width: 3rem;
+    height: .2rem;
+    display: block;
+    background-color: white; }
+
+.button {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  position: absolute;
+  top: 00%;
+  height: 100%;
+  transition: all .3s ease; }
+  .button__right {
+    right: 0%; }
+  .button__left {
+    left: 0; }
+  .button:hover {
+    background-color: #bdbdbd; }
